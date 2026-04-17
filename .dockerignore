@@ -1,0 +1,33 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment and dependencies
+.venv/
+venv/
+env/
+ENV/
+bin/
+lib/
+include/
+
+# Data and Logs
+data/
+logs/
+*.log
+*.pdf
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git and Metadata
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+
