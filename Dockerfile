@@ -33,8 +33,6 @@ RUN python -m nltk.downloader punkt
 # Copy the rest of the application code into the container
 COPY . .
 
-# Expose the port the app runs on (7860 is default for Hugging Face)
-EXPOSE 7860
-
-# Command to run the application (PORT is usually set by HF, but we default to 7860)
+# Railway automatically injects the PORT environment variable
+# We don't hardcode EXPOSE to remain flexible
 CMD ["python", "main.py"]

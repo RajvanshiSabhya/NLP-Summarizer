@@ -58,6 +58,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/", tags=["Health"])
+async def root():
+    """
+    ### API Health Check
+    Returns the status of the API and model loading.
+    """
+    return {
+        "status": "online",
+        "message": "⚖️ Legal Document Summarizer API is running",
+        "version": "2.0.0",
+        "models_loaded": True
+    }
+
 # Initialize models (load on startup)
 logger.info("Loading NLP models... this may take a moment.")
 abs_summarizer = AbstractiveSummarizer()
