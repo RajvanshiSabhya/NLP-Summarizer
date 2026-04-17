@@ -7,8 +7,10 @@ from typing import List
 # Download sentence tokenizer
 try:
     nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
     nltk.download('punkt')
+    nltk.download('punkt_tab')
 
 class ExtractiveSummarizer:
     def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):

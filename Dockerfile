@@ -28,7 +28,7 @@ RUN python -c "from transformers import AutoTokenizer, AutoModelForSeq2SeqLM; \
     AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-large-cnn')"
 RUN python -c "from sentence_transformers import SentenceTransformer; \
     SentenceTransformer('all-MiniLM-L6-v2')"
-RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader punkt punkt_tab
 
 # Copy the rest of the application code into the container
 COPY . .
